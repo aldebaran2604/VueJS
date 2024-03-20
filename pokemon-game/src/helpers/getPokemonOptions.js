@@ -1,12 +1,12 @@
 import pokemonApi from '@/api/pokemonApi'
 
-const getPokemons = () => {
+export const getPokemons = () => {
     const pokemonsArray = Array.from(Array(650));
     
     return pokemonsArray.map((_, index) => index++);
 }
 
-const getPokemonNames = async ([pokemonA, pokemonB, pokemonC, pokemonD] = []) => {
+export const getPokemonNames = async ([pokemonA, pokemonB, pokemonC, pokemonD] = []) => {
     const promisesArray = [
         pokemonApi.get(`/${pokemonA}`),
         pokemonApi.get(`/${pokemonB}`),
